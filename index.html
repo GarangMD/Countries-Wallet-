@@ -5,32 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌍 Country Information Finder</title>
 
-    <!-- Link external CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Leaflet Map -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
+
 <body>
+
+<header>
+
+<h1>🌍 Country Information Finder</h1>
+
+<p>
+Professional • Accurate • Interactive • Auto-Updating
+</p>
+
+</header>
+
 <div class="container">
-    <div class="title">🌍 Country Information Finder</div>
 
-    <input type="text" id="countryInput" placeholder="Enter a country name..." list="countriesList">
-    <datalist id="countriesList">
-        <option value="Kenya">
-        <option value="South Sudan">
-        <option value="USA">
-        <option value="Canada">
-        <option value="India">
-        <option value="France">
-        <option value="Germany">
-        <!-- Add more countries as needed -->
-    </datalist>
+<div class="search-area">
 
-    <button onclick="searchCountry()">Search</button>
-    <button onclick="toggleDark()">Toggle Dark Mode</button>
+<input
+type="text"
+id="countryInput"
+placeholder="Enter a country name..."
+autocomplete="off">
 
-    <div id="result"></div>
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+<button id="voiceBtn">
+
+<i class="fa-solid fa-microphone"></i>
+
+Voice
+
+</button>
+
+<button id="darkBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+Dark
+
+</button>
+
 </div>
 
-<!-- Link external JS -->
-<script src="script.js" defer></script>
+<div id="loading">
+
+<div class="spinner"></div>
+
+<p>Fetching latest country information...</p>
+
+</div>
+
+<div id="result"></div>
+
+<div id="weatherCard"></div>
+
+<div id="map"></div>
+
+<section class="history">
+
+<h2>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Recent Searches
+
+</h2>
+
+<ul id="historyList"></ul>
+
+</section>
+
+<section class="favorites">
+
+<h2>
+
+<i class="fa-solid fa-heart"></i>
+
+Favorite Countries
+
+</h2>
+
+<ul id="favoriteList"></ul>
+
+</section>
+
+</div>
+
+<footer>
+
+<p>
+
+Developed by <strong>Garang Deng</strong>
+
+</p>
+
+<p>
+
+Powered by
+
+REST Countries API • OpenStreetMap • wttr.in
+
+</p>
+
+</footer>
+
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
 </body>
 </html>
