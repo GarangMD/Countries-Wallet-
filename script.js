@@ -3,8 +3,9 @@
 // Developed by Garang Deng
 // ===================================
 
-// API
-const API_URL = "https://restcountries.com/v3.1/name/";
+// const response = await fetch(
+    `${API_URL}${encodeURIComponent(country)}?fullText=false`
+);
 
 // Elements
 const countryInput = document.getElementById("countryInput");
