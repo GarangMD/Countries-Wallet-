@@ -26,7 +26,10 @@ const loading = document.getElementById("loading");
 const weatherCard = document.getElementById("weatherCard");
 
 // Event Listeners
-searchBtn.addEventListener("click", searchCountry);
+
+if (searchBtn) {
+    searchBtn.addEventListener("click", searchCountry);
+}
 
 countryInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
