@@ -3,8 +3,19 @@
 // Developed by Garang Deng
 // ===================================
 
-// const API_URL = "https://restcountries.com/v3.1/name/";
+
+const countryInput = document.getElementById("countryInput");
+const searchBtn = document.getElementById("searchBtn");
+const darkBtn = document.getElementById("darkBtn");
+const voiceBtn = document.getElementById("voiceBtn");
+const result = document.getElementById("result");
+const loading = document.getElementById("loading");
+const weatherCard = document.getElementById("weatherCard");
+
+// const response = await fetch(
+    `${API_URL}${encodeURIComponent(country)}?fullText=false`
 );
+
 
 // Elements
 const countryInput = document.getElementById("countryInput");
