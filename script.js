@@ -85,7 +85,11 @@ async function searchCountry(){
         const data =
             await response.json();
 
-        const c = data[0];
+        if (!data || data.length === 0) {
+    throw new Error("Country not found");
+}
+
+const c = data[0];
 
         const languages =
             c.languages
